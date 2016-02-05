@@ -106,24 +106,37 @@
 
     <h3>Opdracht 5</h3>
 
+    <form action="#" method="post">
+        <input type="radio" name="radio" value="sinsaasappel">sinsaasappel
+        <input type="radio" name="radio" value="kroket">kroket
+        <input type="radio" name="radio" value="banaan">banaan
+        <input type="radio" name="radio" value="appel">appel
+        <input type="radio" name="radio" value="zand">zand
+        <input type="submit" name="submit5" value="check" class="btn btn-default">
+    </form>
     <?php
-    $product = "appel";
+        if(isset($_POST['radio'])) {
 
-    switch($product) {
-        case "sinaasappel";
-            echo "product is een apple";
-            break;
-        case "kroket";
-            echo "product is een kroket";
-            break;
-        case "banaan";
-            echo "product is een banaan";
-            break;
-        case "appel";
-            echo"product is een appel";
-            break;
-    }
 
+            $product = "appel";
+
+            switch ($product) {
+                case $_POST['radio'] === "sinsaasappel";
+                    echo "product is een sinaasappel";
+                    break;
+                case $_POST['radio'] === "kroket";
+                    echo "product is een kroket";
+                    break;
+                case $_POST['radio'] === "banaan";
+                    echo "product is een banaan";
+                    break;
+                case $_POST['radio'] === "appel";
+                    echo "product is een appel";
+                    break;
+                default:
+                    echo "Er is geen match";
+            }
+        }
     ?>
 
 </div>
