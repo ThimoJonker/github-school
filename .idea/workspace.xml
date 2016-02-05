@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49828c44-ba12-4d06-a914-676dda843b53" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/school/if-else-switch/index.php" afterPath="$PROJECT_DIR$/school/if-else-switch/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\tammo\Desktop\php-lessen\school\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\tammo\Desktop\php-lessen\school\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\tammo\Desktop\php-lessen\school\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\tammo\Desktop\php-lessen\school\.idea\php.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\tammo\Desktop\php-lessen\school\.idea\school.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\tammo\Desktop\php-lessen\school\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\tammo\Desktop\php-lessen\school\.idea\workspace.xml" afterPath="" />
     </list>
     <ignored path="school.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +33,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/school/if-else-switch/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69602275">
-              <caret line="134" column="26" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.57528406">
+              <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
               <folding>
                 <marker date="1454697703065" expanded="true" signature="763:1115" placeholder="..." />
                 <marker date="1454697703065" expanded="true" signature="1157:1354" placeholder="..." />
@@ -365,7 +370,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454696141241</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="opdrachten zijn allemaal af. (t/m 5) nu ook met radio buttons">
+      <created>1454697819457</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1454697819457</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -400,7 +411,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="opdrachten zijn allemaal af. (t/m 5)" />
-    <option name="LAST_COMMIT_MESSAGE" value="opdrachten zijn allemaal af. (t/m 5)" />
+    <MESSAGE value="opdrachten zijn allemaal af. (t/m 5) nu ook met radio buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="opdrachten zijn allemaal af. (t/m 5) nu ook met radio buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -417,8 +429,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/school/if-else-switch/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69602275">
-          <caret line="134" column="26" selection-start-line="134" selection-start-column="26" selection-end-line="134" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.57528406">
+          <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
           <folding>
             <marker date="1454697703065" expanded="true" signature="763:1115" placeholder="..." />
             <marker date="1454697703065" expanded="true" signature="1157:1354" placeholder="..." />
