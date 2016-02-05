@@ -1,0 +1,26 @@
+body  {
+
+font-family		: 'Reenie Beanie', cursive;
+font-size 		: 24px;
+
+}
+
+#container {
+	position 	: relative;
+	left 		: 300px;
+}
+
+
+	
+input{
+font-family		: 'Reenie Beanie', cursive;
+font-size 		: 29px;
+}
+
+.sterrenbeeld {
+
+font-size 		: 55px;
+font-style 		: bold;
+}
+
+
