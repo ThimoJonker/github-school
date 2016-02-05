@@ -21,7 +21,7 @@ if(isset($_POST['submit'])) {
     $number = $_POST['number'];
 
     if ($number <= 5) {
-        echo 'Onvoldoende';
+        echo 'Onvoldoende!!';
     }
     elseif($number > 5 && $number <= 8){
         echo 'Voldoende';
