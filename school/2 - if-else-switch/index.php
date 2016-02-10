@@ -19,7 +19,7 @@
     <h3>Opdracht 1</h3>
 
     <form name="form" action="#" method="post" class="">
-        <h4>vul je cijfer in</h4>
+        <h4>Vul je cijfer in</h4>
         <input  type="text" name="number">
         <input class="btn btn-default" type="submit" name="submit" value="Zoek">
     </form>
@@ -43,7 +43,7 @@
     <h3>Opdracht 2</h3>
 
     <form name="forma" action="#" method="post" class="">
-        <h4>vul een je leeftijd in</h4>
+        <h4>Vul je geboorte jaar in</h4>
         <input class="" type="text" name="geboorte" value="">
         <input class="btn btn-default" type="submit" name="submitGJ" value="Zoek">
     </form>
@@ -84,7 +84,7 @@
 
     <h3>Opdracht 4</h3>
     <form name="forma2" action="#" method="post" class="">
-        <h4>vul een je leeftijd in</h4>
+        <h4>Vul je geboorte jaar in</h4>
         <input class="" type="text" name="geboorte2" value="">
         <input class="btn btn-default" type="submit" name="submitGJ2" value="Zoek">
     </form>
