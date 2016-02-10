@@ -32,7 +32,7 @@
             echo $a . "<br />";
 
         }
-        while($a <= 2084);
+        while($a < 2084);
         ?>
 
         <h3>Opdracht 4</h3>
@@ -54,7 +54,7 @@
             )
         );
         foreach($auto_array as $x){
-            if($x["verbruik"] <= 11){
+            if($x["verbruik"] >= 11){
                 echo "De " . $x["auto"] . "(lekker zuinig!)" . " kan " . $x["max snelheid"] . " rijden! <br />";
             }else{
                 echo "De " . $x["auto"] . " kan " . $x["max snelheid"] . " rijden! <br />";
