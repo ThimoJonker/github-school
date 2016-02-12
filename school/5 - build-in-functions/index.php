@@ -17,6 +17,7 @@
 <div class="container">
     <h3>Opdracht 1</h3>
     <?php
+
     $naam = "ThimoJonker";
     $length = strlen($naam);
     $pos = rand(0, $length - 1);
@@ -45,7 +46,7 @@
     for($i = 0; $i < 10; $i++){
         $abcRand = rand(0, $abcLength - 1);
             if($i < 2){
-                echo $abc[$abcRand];
+                echo strtoupper($abc[$abcRand]);
                 if($i == 1){
                     echo "-";
                 }
@@ -56,8 +57,21 @@
     }
     ?>
     <hr>
-    <h3>Opdracht</h3>
+    <h3>Opdracht 4</h3>
+    <?php
+    function calc($aantalAppels, $aantalDrop){
+        $appels = $aantalAppels * 0.58;
+        $drop = $aantalDrop * 1.29;
 
+        setlocale(LC_ALL, 'it_IT@euro', 'it_IT', 'it');
+        $totaalInc = $appels + $drop;
+        $btw = $totaalInc * 0.21;
+        echo round($btw,2) . "<br />";
+        echo $exBtw = $totaalInc - $btw . "<br />";
+        echo round($totaalInc,2) . "<br />";
+    }
+    calc(10, 5);
+    ?>
 
 
 </div>
