@@ -63,6 +63,7 @@
         $appels = $aantalAppels * 0.58;
         $drop = $aantalDrop * 1.29;
 
+
         setlocale(LC_ALL, 'it_IT@euro', 'it_IT', 'it');
         $totaalInc = $appels + $drop;
         $btw = $totaalInc * 0.21;
@@ -71,6 +72,8 @@
         echo round($totaalInc,2) . "<br />";
     }
     calc(10, 5);
+    echo "";
+
     ?>
 
 
