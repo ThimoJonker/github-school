@@ -169,6 +169,23 @@
         echo bereken($getal1, $getal2);
     }
     ?>
+    <h3>Opdracht 6</h3>
+    <?php
+    function priem($n){
+        for($i=1; $i <= $n; $i++){
+            $counter = 0;
+            for($j=1; $j<=$i; $j++){
+                if($i % $j==0){
+                    $counter++;
+                }
+            }
+            if($counter==2){
+               print $i." is een priemgetal <br/>";
+            }
+        }
+    }
+    priem(400);
+    ?>
 </div>
 </body>
 </html>
