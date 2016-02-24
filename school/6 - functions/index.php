@@ -16,6 +16,11 @@
 <body>
 <div class="container">
     <h3>Opdracht 1</h3>
+    <form action="#" method="post">
+        <input name="geboortedag" type="number" placeholder="geboortedag">
+        <input name="geboortemaand" type="number" placeholder="geboortemaand">
+        <input type="submit" name="btnGeboorte" value="Check sterrenbeeld">
+    </form>
     <?php
     function sterrenBeeld($geboortedag, $geboortemaand){
         switch($geboortemaand){
@@ -93,15 +98,30 @@
                 }
         }
     }
-    echo sterrenBeeld(8,11);
+    if(isset($_POST['btnGeboorte'])){
+        $dag = $_POST['geboortedag'];
+        $maand = $_POST['geboortemaand'];
+        echo "<h4 class='text-info'>" . sterrenBeeld($dag, $maand) . "</h4>";
+    }
+
     ?>
 
     <h3>Opdracht 2</h3>
+
+    <form action="#" method="post">
+        <input name="txtName" type="text" placeholder="Vul naam in..">
+        <input type="submit" name="btnName" value="Draai naam!">
+    </form>
     <?php
-    function omdraai($string){
-        return strrev($string);
+
+    if(isset($_POST['btnName'])){
+        $txtName = $_POST['txtName'];
+        function omdraai($string){
+            return strrev($string);
+        }
+        echo "<h4 class='text-info'>" .omdraai($txtName) . "</h4>";
+
     }
-    echo omdraai("Sinterklaas");
     ?>
 
     <h3>Opdracht 3</h3>
@@ -114,13 +134,40 @@
     snoepjes(["Koek", "Drop", "Chips", "Cola"]);
     ?>
 
-    <h3>Opdracht 3</h3>
+    <h3>Opdracht 4</h3>
     <?php
     function gekkeDatum(){
-        $array = [date(l),date(B), date(F)];
-        return $array;
+        $array = ["%A","%H:","%M:","%S","%B"];
+        setlocale(LC_ALL, 'Dutch');
+        return strftime("%A %H:%M:%S %B");
     }
     echo gekkeDatum();
+    ?>
+
+    <h3>Opdracht 5</h3>
+    <form action="#" method="post">
+        <input name="getal1" type="number" placeholder="getal 1">
+        <input type="submit" name="btn"  value="+">
+        <input type="submit" name="btn" value="-">
+        <input type="submit" name="btn" value="Wortel">
+        <input name="getal2" type="number" placeholder="getal 2">
+    </form>
+    <?php
+    function bereken($num1, $num2){
+        $square = '&#8730';
+        $btn = $_POST['btn'];
+        if($btn == '+')
+            return $num1 + $num2;
+        elseif($btn == '-')
+            return $num1 - $num2;
+        elseif($btn == 'Wortel')
+            return sqrt($num1);
+    }
+    if(isset($_POST['btn'])){
+        $getal1 = $_POST['getal1'];
+        $getal2 = $_POST['getal2'];
+        echo bereken($getal1, $getal2);
+    }
     ?>
 </div>
 </body>
