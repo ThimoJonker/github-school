@@ -142,7 +142,7 @@
         return strftime("%A %H:%M:%S %B");
     }
     echo gekkeDatum();
-    ?>a
+    ?>
 
     <h3>Opdracht 5</h3>
     <form action="#" method="post">
