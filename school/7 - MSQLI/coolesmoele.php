@@ -8,10 +8,14 @@
 
 include 'database.php';
 
+
+
 $con = connectDB();
 
 $random = selectRandom();
+
 echo $random;
+
 
 $result = $con->query("SELECT image, name FROM image WHERE id = '$random'");
 
@@ -26,6 +30,13 @@ function selectRandom(){
     $random = rand(1, checkHowManyImages());
     return $random;
 }
+function coolButton($soms){
+    if(isset($_POST['cool'])){
+        $con2 = connectDB();
+        $con2->query("UPDATE image SET cool = cool + 1 WHERE id = '$soms'");
+    }
+}
+coolButton($random);
 
 ?>
 
@@ -47,7 +58,7 @@ function selectRandom(){
             <?php endwhile; ?>
         </div>
         <br />
-        <form action="" method="post" class="text-center">
+        <form action="coolesmoele.php" method="post" class="text-center">
 
             <input style="margin-right: 0 !important;" class="btn btn-success" type="submit" name="cool" value="Cool">
             <input class="btn btn-danger" type="submit" name="nietcool" value="Niet Cool">
@@ -59,8 +70,7 @@ function selectRandom(){
 </html>
 
 <?php
-if(isset($_POST['cool'])){
-    $con2 = connectDB();
-    $con2->query("UPDATE image SET cool = cool + 1 WHERE id = '$random'");
-}
+
+
+
 ?>
