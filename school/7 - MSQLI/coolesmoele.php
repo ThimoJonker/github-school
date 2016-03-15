@@ -29,11 +29,21 @@ include 'script2.php';
         <br/>
 
         <form action="" method="post" class="text-center">
-            <input type="hidden" name="hiddenrandom" value="<?php echo $random; ?>">
+            <input type="hidden" name="hiddenrandomCool" value="<?php echo $random; ?>">
+            <input type="hidden" name="hiddenrandomNietCool" value="<?php echo $random; ?>">
             <input style="margin-right: 0 !important;" class="btn btn-success" type="submit" name="cool" value="Cool">
             <input class="btn btn-danger" type="submit" name="nietcool" value="Niet Cool">
         </form>
+        <br/><hr><br/>
+        <div class="text-center">
+            <h3>Check top 10</h3>
+                <?php while ($row2 = mysqli_fetch_array($result2)): ?>
+                    <div class="text-center col-md-12"><img src="<?php echo $row2["image"] ?>" alt="<?php echo $row2["name"] ?>" class="img-thumbnail">
+                    <div class="text-info"><?php echo $row2['cool']; ?></div></div>
+                <?php endwhile; ?>
+        </div>
     </div>
 </div>
+
 </body>
 </html>

@@ -6,7 +6,6 @@
  * Time: 14:26
  */
 // toevoegen van html login pagina
-include 'login.php';
 include 'database.php';
 
 

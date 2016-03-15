@@ -21,17 +21,28 @@ function selectRandom(){
 
 $con = connectDB();
 $random = selectRandom(); // maakt nieuwe random aan
-echo "de random id in de selectRandomImage function is: " .$random; // check if random is the same
+// echo "de random id in de selectRandomImage function is: " .$random; // check if random is the same
 $result = $con->query("SELECT image, name FROM image WHERE id = '$random'");
 
 
 
 function coolPlusOne(){
-    $randomId = $_POST['hiddenrandom'];
+    $randomId = $_POST['hiddenrandomCool'];
     $con = connectDB();
     $con->query("UPDATE image SET cool = cool + 1 WHERE id = '$randomId'");
+}
+function coolMinusOne(){
+    $randomId = $_POST['hiddenrandomNietCool'];
+    $con = connectDB();
+    $con->query("UPDATE image SET nietcool = nietcool + 1 WHERE id = '$randomId'");
 }
 
 if(isset($_POST['cool'])) {
     coolPlusOne();
 }
+if(isset($_POST['nietcool'])) {
+    coolMinusOne();
+}
+
+$result2 = $con->query("SELECT image, name, cool FROM IMAGE ORDER BY cool DESC");
+
