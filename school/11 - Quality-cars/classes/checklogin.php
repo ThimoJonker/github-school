@@ -8,7 +8,7 @@
  */
 include('database.php');
 
-
+session_start();
 class Login{
 
     public $username;
@@ -38,8 +38,9 @@ class Login{
 if(isset($_POST['Submit'])) {
     $login = new Login($_POST['Username'],$_POST['Password']);
     if($login->checkLogin()){
-        session_start();
+        $_SESSION['username'] = $_POST['Username'];
         header("Location: index.php");
+
 
     }else{
         echo 'Fout bij inloggen.';
