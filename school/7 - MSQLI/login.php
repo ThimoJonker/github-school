@@ -7,7 +7,7 @@ include 'checklogin.php';
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../11%20-%20Quality-cars/css/style.css">
     <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
