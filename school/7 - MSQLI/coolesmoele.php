@@ -22,12 +22,13 @@ include 'script2.php';
     <div class="wrapper">
         <div class="text-center">
             <h3>Coole smoele</h3>
-            <?php while ($row = mysqli_fetch_array($result)): ?>
-                <div class="text-center"><img src="<?php echo $row["image"] ?>" alt="<?php echo $row["name"] ?>" class="img-thumbnail "></div>
-            <?php endwhile; ?>
+            <?php $cool = selectRandomImages($random);
+            foreach($cool as $x){
+            ?><div class="text-center"><img src="<?php echo $x["image"] ?>" alt="<?php echo $x["name"] ?>" class="img-thumbnail "></div>
+            <?php }
+            ?>
+            <br/>
         </div>
-        <br/>
-
         <form action="" method="post" class="text-center">
             <input type="hidden" name="hiddenrandomCool" value="<?php echo $random; ?>">
             <input type="hidden" name="hiddenrandomNietCool" value="<?php echo $random; ?>">
@@ -37,10 +38,12 @@ include 'script2.php';
         <br/><hr><br/>
         <div class="text-center">
             <h3>Check top 10</h3>
-                <?php while ($row2 = mysqli_fetch_array($result2)): ?>
-                    <div class="text-center col-md-12"><img src="<?php echo $row2["image"] ?>" alt="<?php echo $row2["name"] ?>" class="img-thumbnail">
-                    <div class="text-info"><?php echo $row2['cool']; ?></div></div>
-                <?php endwhile; ?>
+                <?php $top = selectTop();
+                foreach($top as $x):
+                ?>
+                    <div class="text-center col-md-12"><img src="<?php echo $x["image"] ?>" alt="<?php echo $x["name"] ?>" class="img-thumbnail">
+                    <div class="text-info"><?php echo $x['cool']; ?></div></div>
+                <?php endforeach; ?>
         </div>
     </div>
 </div>
