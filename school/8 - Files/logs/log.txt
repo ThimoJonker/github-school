@@ -1,0 +1,14 @@
+[12-Apr-2016 17:07:29 Europe/Berlin] PHP Warning:  require(pagina404.php): failed to open stream: No such file or directory in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:29 Europe/Berlin] PHP Fatal error:  require(): Failed opening required 'pagina404.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:30 Europe/Berlin] PHP Warning:  require(pagina404.php): failed to open stream: No such file or directory in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:30 Europe/Berlin] PHP Fatal error:  require(): Failed opening required 'pagina404.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:30 Europe/Berlin] PHP Warning:  require(pagina404.php): failed to open stream: No such file or directory in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:30 Europe/Berlin] PHP Fatal error:  require(): Failed opening required 'pagina404.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:30 Europe/Berlin] PHP Warning:  require(pagina404.php): failed to open stream: No such file or directory in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:30 Europe/Berlin] PHP Fatal error:  require(): Failed opening required 'pagina404.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:31 Europe/Berlin] PHP Warning:  require(pagina404.php): failed to open stream: No such file or directory in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:31 Europe/Berlin] PHP Fatal error:  require(): Failed opening required 'pagina404.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:31 Europe/Berlin] PHP Warning:  require(pagina404.php): failed to open stream: No such file or directory in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:07:31 Europe/Berlin] PHP Fatal error:  require(): Failed opening required 'pagina404.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:08:15 Europe/Berlin] PHP Warning:  require(pagina404.php): failed to open stream: No such file or directory in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
+[12-Apr-2016 17:08:15 Europe/Berlin] PHP Fatal error:  require(): Failed opening required 'pagina404.php' (include_path='D:\xampp\php\PEAR') in D:\xampp\htdocs\php-lessen\school\school\8 - Files\index.php on line 26
