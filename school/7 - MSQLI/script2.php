@@ -21,28 +21,55 @@ function selectRandom(){
 
 $con = connectDB();
 $random = selectRandom(); // maakt nieuwe random aan
-// echo "de random id in de selectRandomImage function is: " .$random; // check if random is the same
-$result = $con->query("SELECT image, name FROM image WHERE id = '$random'");
+// echo "de random id in de selectRandomImage function is: " .$random; // check if random is the
 
 
-
-function coolPlusOne(){
-    $randomId = $_POST['hiddenrandomCool'];
+function selectRandomImages ($random)
+{
+    $i=0;
     $con = connectDB();
-    $con->query("UPDATE image SET cool = cool + 1 WHERE id = '$randomId'");
+    $result = $con->query("SELECT image, name FROM image WHERE id = '$random'");
+    while ($row = mysqli_fetch_array($result)){
+
+        $return[$i]['image'] = $row["image"];
+        $return[$i]['name'] = $row["name"];
+        $i++;
+    }
+    return $return;
 }
-function coolMinusOne(){
-    $randomId = $_POST['hiddenrandomNietCool'];
+
+function coolPlusOne($randomId){
     $con = connectDB();
-    $con->query("UPDATE image SET nietcool = nietcool + 1 WHERE id = '$randomId'");
+    $result = $con->prepare("UPDATE image SET cool = cool + 1 WHERE id = ?");
+    $result->bind_param('i', $randomId);
+    $result->execute();
+
+}
+function coolMinusOne($randomId){
+    $con = connectDB();
+    $result = $con->prepare("UPDATE image SET nietcool = nietcool + 1 WHERE id = ?");
+    $result->bind_param('i', $randomId);
+    $result->execute();
 }
 
 if(isset($_POST['cool'])) {
-    coolPlusOne();
+    coolPlusOne($_POST['hiddenrandomCool']);
 }
 if(isset($_POST['nietcool'])) {
-    coolMinusOne();
+    coolMinusOne($_POST['hiddenrandomNietCool']);
+}
+function selectTop(){
+    $i = 0;
+    $con = connectDB();
+    $result2 = $con->query("SELECT image, name, cool FROM IMAGE ORDER BY cool DESC");
+
+    while ($row = mysqli_fetch_array($result2)){
+        $return[$i]['image'] = $row["image"];
+        $return[$i]['name'] = $row["name"];
+        $return[$i]['cool'] = $row["cool"];
+        $i++;
+    }
+    return $return;
 }
 
-$result2 = $con->query("SELECT image, name, cool FROM IMAGE ORDER BY cool DESC");
 

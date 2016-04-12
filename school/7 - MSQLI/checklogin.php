@@ -16,8 +16,13 @@ if(isset($_POST['Submit'])){
     $myusername = $_POST['Username'];
     $mypassword = $_POST['Password'];
 
-    $result = $con->query("SELECT * FROM login WHERE username = '{$myusername}' AND password = '{$mypassword}' LIMIT 1");
-    if (!$result->num_rows == 1) {
+    $result = $con->prepare("SELECT username FROM login WHERE username = ? AND password = ? LIMIT 1");
+    $result->bind_param("ss", $myusername, $mypassword);
+    $result->execute();
+    $result->bind_result($ant);
+    $result->fetch();
+
+    if (!$ant == $myusername) {
         echo "<p>Fout bij het inloggen..</p>";
     } else {
         echo "<p>Welkom $myusername je bent ingelogd</p>";
