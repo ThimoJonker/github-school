@@ -20,7 +20,7 @@ if(isset($_POST["submit"])) {
 }
 // check of file groter is dan 2mb
 if ($_FILES["fileToUpload"]["size"] > 2000000) {
-    echo "Bestand is té groot, max 2mb";
+    echo "Bestand is te groot, max 2mb";
     $uploadOk = 0;
 }
 // Alleen png en jpg

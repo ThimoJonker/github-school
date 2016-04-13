@@ -10,20 +10,23 @@ function randLetter()
 {
     $abc = "abcdefghijklmnopqrstuvwxyz";
     $abcLength = strlen($abc);
+    $string = "";
     for($i = 0; $i < 8; $i++){
         $abcRand = rand(0, $abcLength - 1);
-        return strtoupper($abc[$abcRand]);
+        $string .= $abc[$abcRand];
     }
+    return strtoupper($string);
 }
+
 
 $filename   = $_FILES['fileToUpload']['name'];
 $extension  = pathinfo($filename, PATHINFO_EXTENSION);
-$new        = randLetter().randLetter().randLetter().randLetter().randLetter().randLetter().randLetter().randLetter();
+$new        = randLetter();
 $newfilename=$new.".".$extension;
-
 
 $uploadOk = 1;
 $imageFileType = pathinfo($filename, PATHINFO_EXTENSION);
+
 if(isset($_POST["submit"])) {
     $check = filesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
@@ -40,7 +43,7 @@ if($imageFileType != "doc" && $imageFileType != "docx" ) {
     $uploadOk = 0;
 }
 
-if ($uploadOk == 0) {
+if ($uploadOk == false) {
     echo "Bestand is niet geupload.";
 // Als alles goed is, wordt $uploadOk dus 1 en wordt bestand geupload naar content folder
 } else {

@@ -13,7 +13,7 @@ function leesTxt($textbestand){
     fclose($file);
     return $text;
 }
-//echo leesTxt("text");
+echo leesTxt("text");
 
 
 function errorLog(){
@@ -23,6 +23,6 @@ function errorLog(){
     error_reporting(E_ALL);
 }
 errorLog();
-
+require 'asd.php';
 
 

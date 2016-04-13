@@ -127,11 +127,14 @@
     <h3>Opdracht 3</h3>
     <?php
     function snoepjes($snoep){
+
+        $ant = "";
         foreach($snoep as $x){
-            echo $x;
+            $ant .= $x;
         }
+        return $ant;
     }
-    snoepjes(["Koek", "Drop", "Chips", "Cola"]);
+    echo snoepjes(["Koek", "Drop", "Chips", "Cola"]);
     ?>
 
     <h3>Opdracht 4</h3>
