@@ -18,5 +18,17 @@ $artiest->Aanmaken($artiest);
 </head>
 <body>
 
+CREATE TABLE `artiesten` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`echte_naam` varchar(50) NOT NULL,
+`artiestennaam` varchar(50) NOT NULL,
+`land` varchar(50) NOT NULL,
+`woonplaats` varchar(50) NOT NULL,
+`geboortedatum` date NOT NULL,
+`website` varchar(100) NOT NULL,
+`biografie` varchar(500) NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1
+
 </body>
 </html>
