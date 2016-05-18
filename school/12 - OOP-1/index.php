@@ -6,7 +6,7 @@
  * Time: 10:17
  */
 
-include('classes/artiesten.php');
+include('classes/artiesten1.php');
 include('classes/export.php');
 
 
@@ -36,8 +36,8 @@ include('classes/export.php');
                 $txtName = $_POST['txtValue'];
                 $artiest = new Artiesten();
                 //    print_r($artiest->Lezen($txtName));
-                $array = $artiest->Lezen($txtName);;
-                //    print_r($array, true);
+                $array = $artiest->Lezen($txtName);
+                print_r($array);
             } ?>
         </form>
     </div>
@@ -70,16 +70,17 @@ include('classes/export.php');
             <input name="btnVoegtoe" type="submit" class="btn btn-default" value="Voeg toe">
             <?php if (isset($_POST['btnVoegtoe'])) {
 
-                $naam = $_POST['naam'];
-                $a_naam = $_POST['a_naam'];
-                $land = $_POST['land'];
-                $woonplaats = $_POST['woonplaats'];
-                $datum = $_POST['datum'];
-                $webiste = $_POST['webiste'];
-                $biografie = $_POST['biografie'];
+                $newArtiest = new Artiesten();
 
-                $newArtiest = new Artiesten($naam, $a_naam, $land, $woonplaats, $datum, $webiste, $biografie);
-                $newArtiest->Aanmaken($newArtiest);
+                $newArtiest->echte_naam = $_POST['naam'];
+                $newArtiest->artiestennaam = $_POST['a_naam'];
+                $newArtiest->land = $_POST['land'];
+                $newArtiest->woonplaats = $_POST['woonplaats'];
+                $newArtiest->geboortedatum = $_POST['datum'];
+                $newArtiest->website = $_POST['webiste'];
+                $newArtiest->biografie = $_POST['biografie'];
+
+                $newArtiest->Aanmaken();
 
 
             } ?>
@@ -116,17 +117,18 @@ include('classes/export.php');
 
             <input name="btnWijzig" type="submit" class="btn btn-default" value="Wijzig">
             <?php if (isset($_POST['btnWijzig'])) {
+                $newArtiest = new Artiesten();
                 $id = $_POST['id'];
-                $naam = $_POST['naam'];
-                $a_naam = $_POST['a_naam'];
-                $land = $_POST['land'];
-                $woonplaats = $_POST['woonplaats'];
-                $datum = $_POST['datum'];
-                $webiste = $_POST['webiste'];
-                $biografie = $_POST['biografie'];
 
-                $newArtiest = new Artiesten($naam, $a_naam, $land, $woonplaats, $datum, $webiste, $biografie);
-                $newArtiest->Bijwerken($newArtiest, $id);
+                $newArtiest->echte_naam = $_POST['naam'];
+                $newArtiest->artiestennaam = $_POST['a_naam'];
+                $newArtiest->land = $_POST['land'];
+                $newArtiest->woonplaats = $_POST['woonplaats'];
+                $newArtiest->geboortedatum = $_POST['datum'];
+                $newArtiest->website = $_POST['webiste'];
+                $newArtiest->biografie = $_POST['biografie'];
+
+                $newArtiest->Bijwerken($id);
 
             } ?>
         </form>

@@ -22,36 +22,31 @@ class Artiesten
     public $db;
     public $con;
 
-    public function __construct1(){
-
-        $this->db = new DatabaseMuziek();
-        $this->con = $this->db->connectDB();
+    public function __set($name, $value) {
+        $this->$name = $value;
     }
-    public function __construct($echte_naam, $artiestennaam, $land, $woonplaats, $geboortedatum, $website, $biografie)
+
+    public function __get($name) {
+        return $this->$name;
+    }
+
+    public function __construct()
     {
-        $this->echte_naam = $echte_naam;
-        $this->artiestennaam = $artiestennaam;
-        $this->land = $land;
-        $this->woonplaats = $woonplaats;
-        $this->geboortedatum = $geboortedatum;
-        $this->website = $website;
-        $this->biografie = $biografie;
-
         $this->db = new DatabaseMuziek();
         $this->con = $this->db->connectDB();
     }
 
-    public function Aanmaken(Artiesten $artiest){
+    public function Aanmaken(){
 //        $db = new DatabaseMuziek();
 //        $con = $db->connectDB();
 
-        $this->con->query("INSERT INTO artiesten(echte_naam, artiestennaam, land, woonplaats, geboortedatum, website, biografie) VALUES('{$artiest->echte_naam}','{$artiest->artiestennaam}','{$artiest->land}','{$artiest->woonplaats}','{$artiest->geboortedatum}','{$artiest->website}','{$artiest->biografie}')");
+        $this->con->query("INSERT INTO artiesten(echte_naam, artiestennaam, land, woonplaats, geboortedatum, website, biografie) VALUES('{$this->echte_naam}','{$this->artiestennaam}','{$this->land}','{$this->woonplaats}','{$this->geboortedatum}','{$this->website}','{$this->biografie}')");
     }
-    public function Bijwerken(Artiesten $artiest, $id){
+    public function Bijwerken($id){
 //        $db = new DatabaseMuziek();
 //        $con = $db->connectDB();
 
-        $sql = "UPDATE artiesten SET echte_naam='{$artiest->echte_naam}',artiestennaam='{$artiest->artiestennaam}',land='{$artiest->land}',woonplaats='{$artiest->woonplaats}',geboortedatum='{$artiest->geboortedatum}',website='{$artiest->website}',biografie='{$artiest->biografie}' WHERE id = $id";
+        $sql = "UPDATE artiesten SET echte_naam='{$this->echte_naam}',artiestennaam='{$this->artiestennaam}',land='{$this->land}',woonplaats='{$this->woonplaats}',geboortedatum='{$this->geboortedatum}',website='{$this->website}',biografie='{$this->biografie}' WHERE id = $id";
 
         if(mysqli_query($this->con, $sql)){
             echo 'cool';
@@ -74,16 +69,23 @@ class Artiesten
     }
 
     public function Lezen($naam){
+        $return = null;
         $sql = "SELECT * FROM artiesten WHERE artiestennaam = '$naam'";
         $result = mysqli_query($this->con, $sql);
 
+        $i = 0;
         if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_array($result)){
-                for($i = 1; $i < 7; $i++){
-                    echo $row[$i] . "<br />";
-                }
+               $return[$i][0] = $row[0];
+               $return[$i][1] = $row[1];
+               $return[$i][2] = $row[2];
+               $return[$i][3] = $row[3];
+               $return[$i][4] = $row[4];
+               $return[$i][5] = $row[5];
+               $return[$i][6] = $row[6];
+               $i++;
             }
         }
-
+        return $return;
     }
 }
